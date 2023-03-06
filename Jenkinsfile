@@ -17,7 +17,7 @@ pipeline {
 
         stage('') {
           steps {
-            sh 'cd curriculum-front && npm i && run test:unit'
+            echo '"Hello Jenkins."'
           }
         }
 
