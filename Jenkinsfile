@@ -15,12 +15,18 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
             echo '"Hello Jenkins."'
           }
         }
 
+      }
+    }
+
+    stage('Build') {
+      steps {
+        sh 'docker build -f curriculum-front/Dockerfile .'
       }
     }
 
